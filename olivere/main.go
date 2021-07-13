@@ -7,7 +7,6 @@ import (
 	"log"
 	"os"
 	"reflect"
-
 )
 
 var client *elastic.Client
@@ -167,7 +166,6 @@ func list(size, page int) {
 		return
 	}
 	res, err := client.Search("megacorp").
-
 		Size(size).
 		From((page - 1) * size).
 		Do(context.Background())
