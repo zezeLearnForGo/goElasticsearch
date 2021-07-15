@@ -50,7 +50,7 @@ func create() {
 	//使用结构体
 	e1 := Employee{"Jane", "Smith", 32, "I like to collect rock albums", []string{"music"}}
 	put1, err := client.Index().
-		Index("megacorp").
+		Index("dts").
 		Id("1").
 		BodyJson(e1).
 		Do(context.Background())
@@ -188,9 +188,6 @@ func printEmployee(res *elastic.SearchResult, err error) {
 
 func main() {
 	create()
-	delete()
-	update()
-	gets()
-	query()
+
 	list(1, 3)
 }
